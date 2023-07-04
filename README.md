@@ -21,7 +21,7 @@ pip install cookiecutter
 Create project
 
 ```bash
-cookiecutter https://github.com:HinnyTsang/std-tech-dept-template
+cookiecutter gh:HinnyTsang/std-tech-dept-template
 ```
 
 A project will be created in current directory, you can see it by the following command.
