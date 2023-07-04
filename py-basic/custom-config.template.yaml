@@ -1,0 +1,14 @@
+# Custom config file for the templates
+# https://cookiecutter.readthedocs.io/en/stable/advanced/user_config.html#user-config
+
+default_context:
+  author_name:
+  author_email:
+  github_username:
+  project_name:
+  project_slug:
+  project_short_description:
+  pypi_username:
+  version:
+  git_platform:
+  open_source_license:

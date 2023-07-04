@@ -7,6 +7,10 @@
   "project_short_description": "A very cool project.",
   "pypi_username": "{{ cookiecutter.github_username }}",
   "version": "0.1.0",
+  "git_platform": [
+    "github",
+    "gitlab"
+  ],
   "open_source_license": [
     "MIT",
     "Not open source"
