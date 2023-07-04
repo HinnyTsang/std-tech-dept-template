@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "std-tech-dept-template"
+version = "0.1.0"
+description = ""
+authors = ["HinnyTsang <mhstsangab@connect.ust.hk>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+cookiecutter = "^2.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
