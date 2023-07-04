@@ -1,0 +1,66 @@
+[tool.poetry]
+name = "{{ cookiecutter.repo_name.lower().replace(' ', '-').replace('_', '-') }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.project_short_description }}"
+authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>"]
+license = "{{ cookiecutter.license }}"
+readme = "README.md"
+homepage = "{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name.lower().replace(' ', '-').replace('_', '-') }}"
+repository = "{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name.lower().replace(' ', '-').replace('_', '-') }}"
+keywords = []
+packages = [{ include = "{{ cookiecutter.project.slug }}", from = "src" }]
+classifiers = ["Development Status :: 1 - Planning"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+coverage = "^7.2.7"
+isort = "^5.12.0"
+mypy = "^1.4.1"
+pre-commit = "^3.3.3"
+pylint = "^2.17.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+test = "poetry run pytest"
+lint = "poetry run pylint src"
+typecheck = "poetry run mypy src"
+format = "poetry run isort src"
+
+
+[tool.black]
+line-length = 200
+target-version = ['py38', 'py39', 'py310']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.github
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.isort]
+profile = "black"
+line_length = 200
+src_paths = ["src", "tests"]
