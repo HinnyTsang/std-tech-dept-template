@@ -21,7 +21,15 @@ pip install cookiecutter
 Create project
 
 ```bash
-cookiecutter gh:HinnyTsang/std-tech-dept-template
+# There might be some templates in the future, so you can choose one of them.
+# https://github.com/hinnytsang/std-tech-dept-template.git
+#     |
+#     ├── py-basic/  <- example: --directory="py-basic"
+#     |   ├── {{cookiecutter.project_slug}}/
+#     |   └── cookiecutter.json
+#     └── ...
+
+cookiecutter gh:HinnyTsang/std-tech-dept-template --directory="directory_name"
 ```
 
 A project will be created in current directory, you can see it by the following command.
@@ -29,3 +37,7 @@ A project will be created in current directory, you can see it by the following 
 ```bash
 ls -l
 ```
+
+## User defined configuration
+
+There is a default configuration template in each template `<template/custom-config.template.yaml>`, you can modify it to fit your project.
