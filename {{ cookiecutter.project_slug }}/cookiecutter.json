@@ -1,6 +1,6 @@
 {
-  "full_name": "Albert Einstein",
-  "email": "albert@einstein.com",
+  "author_name": "Albert Einstein",
+  "author_email": "albert@einstein.com",
   "github_username": "AlbertEinstein",
   "project_name": "Time Travel",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",

@@ -1,3 +1,3 @@
-# {{ cookiecutter.project.slug }}
+# {{ cookiecutter.project_slug }}
 
-{{ cookiecutter.project.description }}
+{{ cookiecutter.project_short_description }}

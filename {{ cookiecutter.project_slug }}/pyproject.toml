@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "{{ cookiecutter.repo_name.lower().replace(' ', '-').replace('_', '-') }}"
+name = "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}"
 version = "{{ cookiecutter.version }}"
 description = "{{ cookiecutter.project_short_description }}"
 authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>"]
-license = "{{ cookiecutter.license }}"
+license = "{{ cookiecutter.open_source_license }}"
 readme = "README.md"
-homepage = "{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name.lower().replace(' ', '-').replace('_', '-') }}"
-repository = "{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name.lower().replace(' ', '-').replace('_', '-') }}"
+homepage = "{{ cookiecutter.github_username }}/{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}"
+repository = "{{ cookiecutter.github_username }}/{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}"
 keywords = []
 packages = [{ include = "{{ cookiecutter.project_slug }}", from = "src" }]
 classifiers = ["Development Status :: 1 - Planning"]
