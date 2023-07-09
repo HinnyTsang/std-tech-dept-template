@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "std-tech-dept-template"
 version = "0.1.0"
-description = ""
+description = "Template for python projects"
 authors = ["HinnyTsang <mhstsangab@connect.ust.hk>"]
 readme = "README.md"
 
@@ -11,6 +11,7 @@ python = "^3.10"
 
 [tool.poetry.group.dev.dependencies]
 cookiecutter = "^2.1.1"
+pre-commit = "^3.3.3"
 
 [build-system]
 requires = ["poetry-core"]
