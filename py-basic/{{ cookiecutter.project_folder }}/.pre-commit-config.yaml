@@ -15,25 +15,26 @@ repos:
       - id: debug-statements
       - id: end-of-file-fixer
       - id: trailing-whitespace
-  - repo: local
+  - repo: https://github.com/psf/black
+    rev: 23.3.0
     hooks:
       - id: black
-        name: black
-        entry: black
-        language: system
-        types: [python]
+        language_version: python3.10
+  - repo: https://github.com/pylint-dev/pylint
+    rev: v3.0.0a6
+    hooks:
       - id: pylint
-        name: pylint
-        entry: pylint
-        files: '\.py$'
-        language: python
+        args: [--rcfile=.pylintrc]
+  - repo: https://github.com/DanielNoord/pydocstringformatter
+    rev: v0.7.3
+    hooks:
+      - id: pydocstringformatter
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.4.1
+    hooks:
       - id: mypy
-        name: mypy
-        entry: mypy
-        language: python
-        types: [python]
+        args: [--config-file=pyproject.toml, --strict, --ignore-missing-imports]
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.12.0
+    hooks:
       - id: isort
-        name: isort
-        entry: isort
-        language: system
-        types: [python]
