@@ -7,6 +7,7 @@ default_context:
   github_username:
   project_name:
   project_slug:
+  project_folder:
   project_short_description:
   pypi_username:
   version:

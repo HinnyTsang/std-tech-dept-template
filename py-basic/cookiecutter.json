@@ -4,6 +4,7 @@
   "github_username": "AlbertEinstein",
   "project_name": "Time Travel",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "project_folder": "{{ cookiecutter.project_slug.replace('_', '-') }}",
   "project_short_description": "A very cool project.",
   "pypi_username": "{{ cookiecutter.github_username }}",
   "version": "0.1.0",
